@@ -1,26 +1,26 @@
-✨ Sign-Up & Login System
+# ✨ Sign-Up & Login System
 
 A complete User Authentication System built using HTML, CSS, JavaScript, and Excel as a lightweight storage method.
 This project includes Sign-Up, Login, Forgot Password (OTP-based), and Post-Login navigation pages.
 
-📌 Overview
+# 📌 Overview
 
 This project demonstrates a simple frontend-based authentication flow. Users can create an account, log in using stored credentials, reset passwords via OTP, and access a personalized welcome page with external links.
 
-🚀 Features
-🔐 Account Creation
+# 🚀 Features
+# 🔐 Account Creation
 
 Users can create a new account with Name, Email, Password
 
 Details are stored in an Excel (.xlsx) file using JavaScript
 
-🔑 Login System
+# 🔑 Login System
 
 Email + Password verification
 
 Login succeeds only if credentials match previously stored data
 
-🛠️ Forgot Password with OTP
+# 🛠️ Forgot Password with OTP
 
 User enters email → OTP is generated
 
@@ -28,7 +28,7 @@ On correct OTP, user can create a new password
 
 Updated password is saved to Excel
 
-🧭 Navigation Pages
+# 🧭 Navigation Pages
 
 Index Page
 
@@ -52,7 +52,7 @@ YouTube
 
 And more…
 
-🎨 UI & Styling
+# 🎨 UI & Styling
 
 Built with CSS
 
@@ -60,13 +60,13 @@ Custom background image for clean UI
 
 Styled buttons, forms, input fields
 
-🛠️ Technologies Used
+# 🛠️ Technologies Used
 Technology	Purpose
 HTML	Page structure
 CSS	Styling, layout & UI
 JavaScript	Validation, OTP generation, Excel handling
 Excel (.xlsx)	Storing user records
-📂 Project Structure
+# 📂 Project Structure
 /project-folder
 │── index.html
 │── signup.html
@@ -82,7 +82,7 @@ Excel (.xlsx)	Storing user records
 │── assets/
      └── background.jpg
 
-🔎 How It Works
+# 🔎 How It Works
 
 User enters details → Sign-Up
 
@@ -106,19 +106,7 @@ Updated automatically in Excel
 
 After login → redirect to Join Page with useful external links
 
-🌟 Screenshots (Optional)
-
-You can add:
-
-Sign-Up form
-
-Login form
-
-OTP page
-
-Final welcome page
-
-🚧 Future Improvements
+# 🚧 Future Improvements
 
 Move from Excel → Database (Firebase / MongoDB / MySQL)
 
@@ -128,11 +116,11 @@ Add stronger validation (Regex)
 
 Add session authentication (JWT / Cookies)
 
-🤝 Contributing
+# 🤝 Contributing
 
 Contributions are welcome!
 Feel free to fork the repo and submit pull requests.
 
-📜 License
+# 📜 License
 
 Open-source project – free to use & modify.
