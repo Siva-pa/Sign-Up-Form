@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <style>
+        /* Set background image for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('Images/Background.jpg'); /* Replace with your actual image path */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+        }
+
+        /* Style the forgot password container */
+        .forgot-password-container {
+            background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .back-to-login {
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .back-to-login:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function showAlert(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            alert('Submitted Successfully'); // Show the pop-up message
+        }
+    </script>
+</head>
+<body>
+
+    <div class="forgot-password-container">
+        <h2>Forgot Password</h2>
+        <p>Enter your email address to receive instructions on how to reset your password.</p>
+        <form action="password_recovery_process.html" method="post" onsubmit="showAlert(event)">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        <a href="Loginpage.html" class="back-to-login">Back to Login</a>
+    </div>
+
+</body>
+</html>

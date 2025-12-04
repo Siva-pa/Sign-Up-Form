@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SIGNUP FORM</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .form-section {
+            text-align: center;
+        }
+
+        .name-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .name-group input {
+            width: 48%;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#">  PASUPULETI SIVA KISHORE </a>
+            <nav>
+                <a href="joinpage.html">Join</a>
+            </nav>
+        </header>
+        <div class="form-section">
+            <div class="form-content">
+                <h4>START FOR FREE</h4>
+                <h1>Create A New Account <span></span></h1>
+                <p>Already a member? <a href="Loginpage.html">Log in</a></p>
+            </div>
+            <form id="signup-form" method="post" action="https://script.google.com/macros/s/AKfycbyjoApKqly1aGBghuk1McBy1xPuhhJavJ4KZL8U_d5xRBlAbGk33R0_Oa8qt8uueJi1/exec">
+                <div class="name-group">
+                    <input type="text" id="first-name" placeholder="First name" name="first-name">
+                    <input type="text" id="last-name" placeholder="Last name" name="last-name">
+                </div>
+                <div class="input-group full-width">
+                    <input type="email" id="email" placeholder="Email" name="email">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="input-group full-width">
+                    <input type="password" id="password" placeholder="Password" name="password">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="create-account">Create Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+    document.getElementById("signup-form").onsubmit = function(event) {
+        event.preventDefault(); // Stop default form submission
+
+        var formData = new FormData(this);
+        
+        fetch("https://script.google.com/macros/s/AKfycbyjoApKqly1aGBghuk1McBy1xPuhhJavJ4KZL8U_d5xRBlAbGk33R0_Oa8qt8uueJi1/exec", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text()) // Convert response to text
+        .then(data => {
+            console.log("Server Response:", data);
+            if (data.includes("Success")) { // Check for success response
+                window.location.href = "Accountcreated.html";
+            } else {
+                alert("Error from server: " + data);
+            }
+        })
+        .catch(error => {
+            console.error("Fetch Error:", error);
+            alert("Something went wrong. Please try again.");
+        });
+    };
+</script>
+
+      
+</body>
+</html>
